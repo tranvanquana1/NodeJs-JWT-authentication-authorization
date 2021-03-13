@@ -4,7 +4,8 @@ const db = require("../models");
 const Role = db.role;
 
 exports.connectDatabase = function () {
-  const mongoDBURL = `mongodb://${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/${process.env.MONGO_DB}`;
+  // const mongoDBURL = `mongodb://${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/${process.env.MONGO_DB}`;
+  const mongoDBURL = `mongodb+srv://admin:admin@cluster0.igcnz.mongodb.net/nodeAuth?retryWrites=true&w=majority`;
   console.log(`Connecting to ${mongoDBURL}`);
 
   db.mongoose
